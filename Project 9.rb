@@ -73,9 +73,9 @@ str.delete(' ')
 #10.Remove any \r\n from “Hello World\r\n”
 puts
 #C:\Users\Sedinirina>irb --simple-prompt
- str = "Hello World\r\n"
+str = "Hello World\r\n"
 #=> "Hello World\r\n"
-str.slice 0..10 # the ".slice 0..10" is a little bit confusing for some but this tells Ruby to slice the string. This leaves only characters between 0, the first letter of the string, and 10, the next to last character of the string. This example would produce the string "hello World," with the last character "\r\n" removed.
+str.gsub("\r\n", "") 
 #=> "Hello World"
 #>>
 
